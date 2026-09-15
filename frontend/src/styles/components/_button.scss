@@ -1,0 +1,19 @@
+@use '../base/variables' as *;
+
+.btn {
+  border: none;
+  border-radius: 6px;
+  padding: $espaco-sm $espaco-lg;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &--primary {
+    background: $cor-primaria;
+    color: $cor-branco;
+
+    &:hover {
+      background: $cor-primaria-escura;
+    }
+  }
+}

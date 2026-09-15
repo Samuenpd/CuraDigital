@@ -1,0 +1,55 @@
+@use '../base/variables' as *;
+@use '../utils/mixins' as *;
+
+.oferta-card {
+  display: block;
+  background: $cor-branco;
+  border-radius: 8px;
+  overflow: hidden;
+  @include card-shadow;
+
+  &__imagem {
+    position: relative;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    top: $espaco-sm;
+    right: $espaco-sm;
+    background: $cor-desconto;
+    color: $cor-branco;
+    padding: $espaco-xs $espaco-sm;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: bold;
+  }
+
+  &__conteudo {
+    padding: $espaco-md;
+  }
+
+  &__precos {
+    @include flex(row, flex-start, baseline, $espaco-sm);
+    margin-top: $espaco-sm;
+  }
+
+  &__preco-original {
+    text-decoration: line-through;
+    color: $cor-texto-suave;
+    font-size: 0.9rem;
+  }
+
+  &__preco-atual {
+    color: $cor-primaria-escura;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+}

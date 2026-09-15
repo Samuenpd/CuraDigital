@@ -1,0 +1,32 @@
+// Cores
+$cor-primaria: #ff5722;
+$cor-primaria-escura: #d84315;
+$cor-texto: #212121;
+$cor-texto-suave: #757575;
+$cor-fundo: #fafafa;
+$cor-branco: #ffffff;
+$cor-erro: #d32f2f;
+$cor-desconto: #2e7d32;
+
+// Tipografia
+$fonte-base: 'Segoe UI', system-ui, sans-serif;
+
+// Espaçamentos
+$espaco-xs: 4px;
+$espaco-sm: 8px;
+$espaco-md: 16px;
+$espaco-lg: 24px;
+$espaco-xl: 40px;
+
+// Breakpoints
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1200px;
+
+@mixin mobile {
+  @media (max-width: $breakpoint-mobile) { @content; }
+}
+
+@mixin tablet {
+  @media (max-width: $breakpoint-tablet) { @content; }
+}
