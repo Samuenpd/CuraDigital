@@ -1,29 +1,339 @@
-@use '../base/variables' as *;
-
 .home-page {
-  max-width: $breakpoint-desktop;
+  min-height: 100vh;
+  background: #f8f5ec;
+  color: #19382b;
+}
+
+/* HERO */
+
+.home-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 430px;
+  display: flex;
+  align-items: center;
+  padding: 70px max(6vw, 32px);
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(181, 216, 190, 0.55),
+      transparent 30%
+    ),
+    linear-gradient(135deg, #f7f3e8 0%, #edf5eb 100%);
+}
+
+.home-hero__content {
+  position: relative;
+  z-index: 2;
+  width: min(700px, 100%);
+}
+
+.home-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  margin-bottom: 20px;
+  border-radius: 999px;
+  background: #dcebdc;
+  color: #286344;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.home-hero h1 {
+  max-width: 680px;
+  margin: 0;
+  font-size: clamp(40px, 5vw, 68px);
+  line-height: 1.03;
+  letter-spacing: -0.045em;
+  color: #163b2b;
+}
+
+.home-hero h1 span {
+  display: block;
+  color: #4b875e;
+}
+
+.home-hero p {
+  max-width: 560px;
+  margin: 22px 0 30px;
+  color: #65766b;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+/* BUSCA */
+
+.home-search {
+  display: flex;
+  align-items: center;
+  width: min(590px, 100%);
+  height: 62px;
+  padding: 0 18px;
+  gap: 12px;
+  background: #fffdf7;
+  border: 1px solid #dce6dc;
+  border-radius: 17px;
+  box-shadow: 0 12px 35px rgba(35, 71, 49, 0.09);
+  color: #4b875e;
+  transition: 0.2s ease;
+}
+
+.home-search:focus-within {
+  border-color: #78a985;
+  box-shadow: 0 12px 35px rgba(35, 71, 49, 0.14);
+}
+
+.home-page__busca {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #19382b;
+  font-size: 15px;
+}
+
+.home-page__busca::placeholder {
+  color: #98a59c;
+}
+
+.home-search__clear {
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 50%;
+  background: #e9efe8;
+  color: #52715d;
+  cursor: pointer;
+  font-size: 21px;
+  line-height: 1;
+}
+
+.home-search__clear:hover {
+  background: #dce9dc;
+}
+
+/* DECORAÇÃO */
+
+.home-hero__decoration {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  width: 390px;
+  height: 390px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.home-hero__circle {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.home-hero__circle--large {
+  inset: 20px;
+  background: #d9ead8;
+  opacity: 0.7;
+}
+
+.home-hero__circle--small {
+  width: 190px;
+  height: 190px;
+  right: -10px;
+  bottom: 15px;
+  background: #b7d6bc;
+  opacity: 0.75;
+}
+
+.home-hero__icon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 130px;
+  font-weight: 300;
+  color: #4b875e;
+  opacity: 0.8;
+}
+
+/* OFERTAS */
+
+.home-offers {
+  max-width: 1400px;
   margin: 0 auto;
-  padding: $espaco-lg;
+  padding: 60px max(5vw, 24px) 90px;
+}
 
-  &__busca {
-    width: 100%;
-    padding: $espaco-sm $espaco-md;
-    margin: $espaco-md 0;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-  }
+.home-section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 30px;
+}
 
-  &__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: $espaco-md;
+.home-section-header__eyebrow {
+  display: block;
+  margin-bottom: 8px;
+  color: #5b9169;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
 
-    @include mobile {
-      grid-template-columns: 1fr;
-    }
+.home-section-header h2 {
+  margin: 0;
+  color: #19382b;
+  font-size: clamp(27px, 3vw, 38px);
+  letter-spacing: -0.03em;
+}
+
+.home-section-header__count {
+  color: #7c8a81;
+  font-size: 14px;
+}
+
+/* GRID */
+
+.home-page__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+/* LOADING */
+
+.home-loading {
+  display: flex;
+  min-height: 220px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  color: #718077;
+}
+
+.home-loading__spinner {
+  width: 34px;
+  height: 34px;
+  border: 3px solid #dce8dc;
+  border-top-color: #4b875e;
+  border-radius: 50%;
+  animation: home-spin 0.8s linear infinite;
+}
+
+@keyframes home-spin {
+  to {
+    transform: rotate(360deg);
   }
 }
 
-.erro {
-  color: $cor-erro;
+/* MENSAGENS */
+
+.home-message {
+  display: flex;
+  min-height: 220px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  border: 1px dashed #cbdaca;
+  border-radius: 20px;
+  background: rgba(255, 253, 247, 0.7);
+  text-align: center;
+}
+
+.home-message__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 16px;
+  border-radius: 50%;
+  background: #e8f0e6;
+  color: #62846a;
+}
+
+.home-message h3 {
+  margin: 0 0 8px;
+  color: #294536;
+  font-size: 18px;
+}
+
+.home-message p {
+  margin: 0;
+  color: #7a887f;
+  font-size: 14px;
+}
+
+.home-message--error {
+  border-style: solid;
+  border-color: #e2caca;
+  background: #fff8f7;
+  color: #a04e4e;
+}
+
+.home-message--error strong {
+  margin-bottom: 5px;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 1100px) {
+  .home-page__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .home-hero__decoration {
+    right: -100px;
+    opacity: 0.55;
+  }
+}
+
+@media (max-width: 800px) {
+  .home-hero {
+    min-height: auto;
+    padding: 55px 24px 60px;
+  }
+
+  .home-hero__decoration {
+    display: none;
+  }
+
+  .home-page__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-section-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 550px) {
+  .home-hero h1 {
+    font-size: 39px;
+  }
+
+  .home-hero p {
+    font-size: 15px;
+  }
+
+  .home-search {
+    height: 56px;
+  }
+
+  .home-page__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-offers {
+    padding-top: 40px;
+  }
 }
