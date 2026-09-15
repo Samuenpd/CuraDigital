@@ -19,7 +19,7 @@ function Home() {
 
   return (
     <div className="home-page">
-      <h1>Plataforma de Ofertas</h1>
+      <h1>CuraDigital</h1>
 
       <input
         type="search"
