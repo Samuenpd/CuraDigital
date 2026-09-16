@@ -44,7 +44,7 @@ const ofertas = [
     descricao: 'Leitura rápida em 10 segundos, à prova d\'água.',
     preco_original: 39.9,
     preco_atual: 29.9,
-    imagem_url: null,
+    imagem_url: "http://localhost:3000/imagens/termometro-digital.jpg",
     categoria: 'Primeiros Socorros',
   },
   {
@@ -52,7 +52,7 @@ const ofertas = [
     descricao: 'Ação prolongada contra caspa e coceira no couro cabeludo.',
     preco_original: 34.9,
     preco_atual: 24.9,
-    imagem_url: null,
+    imagem_url: "http://localhost:3000/imagens/shampoo-anticaspa.jpg",
     categoria: 'Beleza',
   },
   {
@@ -60,7 +60,7 @@ const ofertas = [
     descricao: 'Pacote com 44 unidades, camada extra absorvente.',
     preco_original: 59.9,
     preco_atual: 44.9,
-    imagem_url: null,
+    imagem_url: "http://localhost:3000/imagens/fralda-infantil.jpg",
     categoria: 'Infantil',
   },
   {
@@ -68,7 +68,7 @@ const ofertas = [
     descricao: 'Suplemento em pó, sabor neutro, sem glúten.',
     preco_original: 89.9,
     preco_atual: 69.9,
-    imagem_url: null,
+    imagem_url: "http://localhost:3000/imagens/colageno.jpg",
     categoria: 'Suplementos',
   },
   {
@@ -84,7 +84,7 @@ const ofertas = [
     descricao: 'Kit variado de curativos hipoalergênicos.',
     preco_original: 15.9,
     preco_atual: 9.9,
-    imagem_url: null,
+    imagem_url: "http://localhost:3000/imagens/curativo-kit.jpg",
     categoria: 'Primeiros Socorros',
   },
   {
@@ -92,7 +92,7 @@ const ofertas = [
     descricao: 'Textura leve, absorção rápida, com vitamina E.',
     preco_original: 32.9,
     preco_atual: 21.9,
-    imagem_url: null,
+    imagem_url: "http://localhost:3000/imagens/hidradante-corporal.jpg",
     categoria: 'Dermocosméticos',
   },
 ];
@@ -106,4 +106,4 @@ ofertas.forEach((oferta) => {
   console.log(`  -> #${criada.id}  ${criada.titulo}`);
 });
 
-console.log('adcionado.');
+console.log('adcionado / atualizado.');

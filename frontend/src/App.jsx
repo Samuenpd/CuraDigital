@@ -6,6 +6,7 @@ import OfertaDetalhe from './pages/OfertaDetalhe';
 import Login from './pages/Login';
 import Cadastro from './pages/Cadastro';
 import Checkout from './pages/Checkout';
+import AdminOfertas from './pages/AdminOfertas';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         {/* Área protegida: só acessível com login (ex.: comprar) */}
         <Route element={<ProtectedRoute />}>
           <Route path="/checkout/:id" element={<Checkout />} />
+          <Route path="/admin/ofertas" element={<AdminOfertas />} />
         </Route>
       </Routes>
     </>

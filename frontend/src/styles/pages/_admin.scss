@@ -1,0 +1,164 @@
+@use '../base/variables' as *;
+
+.admin-page {
+  min-height: calc(100vh - 70px);
+  background: $cor-fundo;
+  padding: $espaco-xl max(5vw, 24px) 80px;
+}
+
+.admin-page__topo {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: $espaco-md;
+  max-width: 960px;
+  margin: 0 auto $espaco-lg;
+}
+
+.admin-page__eyebrow {
+  display: block;
+  margin-bottom: $espaco-xs;
+  color: $cor-primaria;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.admin-page h1 {
+  color: $cor-texto;
+  font-size: 26px;
+  letter-spacing: -0.02em;
+}
+
+.admin-page__erro {
+  max-width: 960px;
+  margin: 0 auto $espaco-md;
+  padding: $espaco-sm $espaco-md;
+  border: 1px solid $cor-erro-borda;
+  border-radius: $raio-sm;
+  background: $cor-erro-fundo;
+  color: $cor-erro;
+  font-size: 13px;
+}
+
+.admin-form-card {
+  max-width: 960px;
+  margin: 0 auto $espaco-lg;
+  padding: $espaco-lg;
+  background: $cor-fundo-card;
+  border: 1px solid $cor-borda;
+  border-radius: $raio-md;
+  box-shadow: $sombra-suave;
+}
+
+.admin-form-card h2 {
+  color: $cor-texto;
+  font-size: 18px;
+  margin-bottom: $espaco-md;
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: $espaco-md;
+}
+
+.admin-form label {
+  display: flex;
+  flex-direction: column;
+  gap: $espaco-xs;
+  color: $cor-texto;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.admin-form input,
+.admin-form textarea {
+  padding: 10px 12px;
+  border: 1px solid $cor-borda;
+  border-radius: $raio-sm;
+  background: $cor-branco;
+  color: $cor-texto;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+
+  &:focus {
+    outline: none;
+    border-color: $cor-borda-hover;
+    box-shadow: $sombra-suave;
+  }
+}
+
+.admin-form__linha {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $espaco-md;
+}
+
+.admin-form__acoes {
+  display: flex;
+  gap: $espaco-sm;
+}
+
+.admin-tabela {
+  max-width: 960px;
+  margin: 0 auto;
+  overflow-x: auto;
+  background: $cor-fundo-card;
+  border: 1px solid $cor-borda;
+  border-radius: $raio-md;
+  box-shadow: $sombra-suave;
+}
+
+.admin-tabela table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-tabela th,
+.admin-tabela td {
+  padding: $espaco-sm $espaco-md;
+  text-align: left;
+  border-bottom: 1px solid $cor-borda;
+  font-size: 14px;
+  color: $cor-texto;
+  white-space: nowrap;
+}
+
+.admin-tabela th {
+  color: $cor-texto-suave;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.admin-tabela tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-tabela__acoes {
+  display: flex;
+  gap: $espaco-sm;
+}
+
+.admin-tabela__remover {
+  color: $cor-erro;
+}
+
+@include tablet {
+  .admin-form__linha {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-page__topo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-tabela th,
+  .admin-tabela td {
+    white-space: normal;
+  }
+}

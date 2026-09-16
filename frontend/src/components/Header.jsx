@@ -29,7 +29,9 @@ function Header() {
 
         {logado ? (
           <>
-            <span className="site-header__usuario">Minha conta</span>
+            <Link to="/admin/ofertas" className="site-header__link">
+              Gerenciar ofertas
+            </Link>
             <button type="button" className="btn btn--outline" onClick={handleSair}>
               Sair
             </button>
