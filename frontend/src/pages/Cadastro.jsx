@@ -3,7 +3,8 @@ import { useNavigate, useLocation, Link } from 'react-router-dom';
 import Button from '../components/Button';
 import { authService } from '../services/api';
 
-function Login() {
+function Cadastro() {
+  const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [erro, setErro] = useState(null);
@@ -18,11 +19,12 @@ function Login() {
     setErro(null);
     setCarregando(true);
     try {
+      await authService.registrar({ nome, email, senha });
       const { token } = await authService.login({ email, senha });
       localStorage.setItem('token', token);
       navigate(destino, { replace: true });
     } catch {
-      setErro('E-mail ou senha inválidos.');
+      setErro('Não foi possível criar sua conta. Verifique os dados e tente de novo.');
     } finally {
       setCarregando(false);
     }
@@ -31,13 +33,24 @@ function Login() {
   return (
     <div className="auth-page">
       <div className="auth-card">
-        <span className="auth-card__eyebrow">Bem-vindo de volta</span>
-        <h1>Entrar</h1>
+        <span className="auth-card__eyebrow">Cuidado que cabe no seu bolso</span>
+        <h1>Criar conta</h1>
         <p className="auth-card__subtitulo">
-          Entre para finalizar sua compra e acompanhar seus pedidos.
+          Leva menos de um minuto — e só é necessário na hora de comprar.
         </p>
 
         <form className="auth-form" onSubmit={handleSubmit}>
+          <label>
+            Nome
+            <input
+              type="text"
+              value={nome}
+              onChange={(e) => setNome(e.target.value)}
+              placeholder="Seu nome completo"
+              required
+            />
+          </label>
+
           <label>
             E-mail
             <input
@@ -56,6 +69,7 @@ function Login() {
               value={senha}
               onChange={(e) => setSenha(e.target.value)}
               placeholder="••••••••"
+              minLength={6}
               required
             />
           </label>
@@ -63,16 +77,16 @@ function Login() {
           {erro && <p className="auth-card__erro">{erro}</p>}
 
           <Button type="submit" variant="primary" disabled={carregando}>
-            {carregando ? 'Entrando...' : 'Entrar'}
+            {carregando ? 'Criando conta...' : 'Criar conta'}
           </Button>
         </form>
 
         <p className="auth-card__rodape">
-          Ainda não tem conta? <Link to="/cadastro">Criar conta</Link>
+          Já tem conta? <Link to="/login">Entrar</Link>
         </p>
       </div>
     </div>
   );
 }
 
-export default Login;
+export default Cadastro;

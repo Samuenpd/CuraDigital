@@ -1,12 +1,36 @@
-// Cores
-$cor-primaria: #ff5722;
-$cor-primaria-escura: #d84315;
-$cor-texto: #212121;
-$cor-texto-suave: #757575;
-$cor-fundo: #fafafa;
+// ============================================================
+// Paleta CuraDigital — mesma paleta aplicada em pages/_home.scss
+// ============================================================
+
+// Cores principais
+$cor-primaria: #4b875e;
+$cor-primaria-escura: #163b2b;
+$cor-primaria-suave: #dcebdc;
+$cor-primaria-suave-hover: #d9ead8;
+
+// Texto
+$cor-texto: #19382b;
+$cor-texto-suave: #65766b;
+$cor-texto-suave-2: #7a887f;
+$cor-texto-placeholder: #98a59c;
+
+// Fundo / superfícies
+$cor-fundo: #f8f5ec;
+$cor-fundo-card: #fffdf7;
 $cor-branco: #ffffff;
-$cor-erro: #d32f2f;
-$cor-desconto: #2e7d32;
+$cor-borda: #dce6dc;
+$cor-borda-hover: #78a985;
+$cor-hover-bg: #e9efe8;
+
+// Estado
+$cor-erro: #a04e4e;
+$cor-erro-fundo: #fff8f7;
+$cor-erro-borda: #e2caca;
+$cor-desconto: #286344;
+
+// Sombra (verde suave, não cinza genérico)
+$sombra-suave: 0 12px 35px rgba(35, 71, 49, 0.09);
+$sombra-suave-forte: 0 12px 35px rgba(35, 71, 49, 0.14);
 
 // Tipografia
 $fonte-base: 'Segoe UI', system-ui, sans-serif;
@@ -17,6 +41,11 @@ $espaco-sm: 8px;
 $espaco-md: 16px;
 $espaco-lg: 24px;
 $espaco-xl: 40px;
+
+// Raios
+$raio-sm: 8px;
+$raio-md: 14px;
+$raio-lg: 17px;
 
 // Breakpoints
 $breakpoint-mobile: 480px;

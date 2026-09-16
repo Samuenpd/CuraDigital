@@ -1,17 +1,25 @@
 @use '../base/variables' as *;
-@use '../utils/mixins' as *;
 
 .oferta-card {
   display: block;
-  background: $cor-branco;
-  border-radius: 8px;
+  background: $cor-fundo-card;
+  border: 1px solid $cor-borda;
+  border-radius: $raio-md;
   overflow: hidden;
-  @include card-shadow;
+  box-shadow: $sombra-suave;
+  transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    box-shadow: $sombra-suave-forte;
+    border-color: $cor-borda-hover;
+    transform: translateY(-2px);
+  }
 
   &__imagem {
     position: relative;
     aspect-ratio: 3 / 2;
     overflow: hidden;
+    background: $cor-primaria-suave;
 
     img {
       width: 100%;
@@ -27,8 +35,8 @@
     background: $cor-desconto;
     color: $cor-branco;
     padding: $espaco-xs $espaco-sm;
-    border-radius: 4px;
-    font-size: 0.85rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
     font-weight: bold;
   }
 
@@ -36,8 +44,16 @@
     padding: $espaco-md;
   }
 
+  &__conteudo h3 {
+    color: $cor-texto;
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+
   &__precos {
-    @include flex(row, flex-start, baseline, $espaco-sm);
+    display: flex;
+    align-items: baseline;
+    gap: $espaco-sm;
     margin-top: $espaco-sm;
   }
 

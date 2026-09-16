@@ -1,0 +1,104 @@
+@use '../base/variables' as *;
+
+.auth-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 70px);
+  padding: $espaco-xl $espaco-md;
+  background: $cor-fundo;
+}
+
+.auth-card {
+  width: min(420px, 100%);
+  padding: $espaco-xl;
+  background: $cor-fundo-card;
+  border: 1px solid $cor-borda;
+  border-radius: $raio-md;
+  box-shadow: $sombra-suave;
+}
+
+.auth-card__eyebrow {
+  display: inline-flex;
+  padding: $espaco-xs $espaco-sm;
+  margin-bottom: $espaco-md;
+  border-radius: 999px;
+  background: $cor-primaria-suave;
+  color: $cor-primaria-escura;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.auth-card h1 {
+  color: $cor-texto;
+  font-size: 26px;
+  letter-spacing: -0.02em;
+  margin-bottom: $espaco-xs;
+}
+
+.auth-card__subtitulo {
+  color: $cor-texto-suave;
+  font-size: 14px;
+  margin-bottom: $espaco-lg;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: $espaco-md;
+}
+
+.auth-form label {
+  display: flex;
+  flex-direction: column;
+  gap: $espaco-xs;
+  color: $cor-texto;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.auth-form input {
+  padding: 12px 14px;
+  border: 1px solid $cor-borda;
+  border-radius: $raio-sm;
+  background: $cor-branco;
+  color: $cor-texto;
+  font-size: 15px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &::placeholder {
+    color: $cor-texto-placeholder;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $cor-borda-hover;
+    box-shadow: $sombra-suave;
+  }
+}
+
+.auth-form .btn {
+  margin-top: $espaco-sm;
+  width: 100%;
+}
+
+.auth-card__erro {
+  padding: $espaco-sm $espaco-md;
+  border: 1px solid $cor-erro-borda;
+  border-radius: $raio-sm;
+  background: $cor-erro-fundo;
+  color: $cor-erro;
+  font-size: 13px;
+}
+
+.auth-card__rodape {
+  margin-top: $espaco-lg;
+  text-align: center;
+  color: $cor-texto-suave;
+  font-size: 13px;
+
+  a {
+    color: $cor-primaria-escura;
+    font-weight: 700;
+  }
+}

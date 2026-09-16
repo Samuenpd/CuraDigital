@@ -1,0 +1,119 @@
+@use '../base/variables' as *;
+
+.oferta-detalhe-page {
+  min-height: 100vh;
+  background: $cor-fundo;
+}
+
+.oferta-detalhe {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: $espaco-xl max(5vw, 24px) 80px;
+}
+
+.oferta-detalhe__voltar {
+  display: inline-flex;
+  align-items: center;
+  gap: $espaco-xs;
+  margin-bottom: $espaco-lg;
+  color: $cor-texto-suave;
+  font-size: 14px;
+  font-weight: 600;
+
+  &:hover {
+    color: $cor-primaria-escura;
+  }
+}
+
+.oferta-detalhe__card {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: $espaco-xl;
+  padding: $espaco-xl;
+  background: $cor-fundo-card;
+  border: 1px solid $cor-borda;
+  border-radius: $raio-md;
+  box-shadow: $sombra-suave;
+}
+
+.oferta-detalhe__imagem {
+  aspect-ratio: 4 / 3;
+  border-radius: $raio-sm;
+  overflow: hidden;
+  background: $cor-primaria-suave;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.oferta-detalhe__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.oferta-detalhe__categoria {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: $espaco-xs $espaco-sm;
+  margin-bottom: $espaco-sm;
+  border-radius: 999px;
+  background: $cor-primaria-suave;
+  color: $cor-primaria-escura;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.oferta-detalhe__info h1 {
+  color: $cor-texto;
+  font-size: clamp(24px, 3vw, 32px);
+  letter-spacing: -0.02em;
+  margin-bottom: $espaco-sm;
+}
+
+.oferta-detalhe__descricao {
+  color: $cor-texto-suave;
+  line-height: 1.65;
+  margin-bottom: $espaco-lg;
+}
+
+.oferta-detalhe__precos {
+  display: flex;
+  align-items: baseline;
+  gap: $espaco-sm;
+  margin-bottom: $espaco-lg;
+}
+
+.oferta-detalhe__preco-original {
+  text-decoration: line-through;
+  color: $cor-texto-suave;
+  font-size: 1rem;
+}
+
+.oferta-detalhe__preco-atual {
+  color: $cor-primaria-escura;
+  font-weight: 800;
+  font-size: 1.9rem;
+}
+
+.oferta-detalhe__acoes {
+  display: flex;
+  flex-direction: column;
+  gap: $espaco-sm;
+  margin-top: auto;
+}
+
+.oferta-detalhe__aviso-login {
+  color: $cor-texto-suave-2;
+  font-size: 13px;
+}
+
+@include tablet {
+  .oferta-detalhe__card {
+    grid-template-columns: 1fr;
+  }
+}

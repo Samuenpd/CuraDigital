@@ -1,4 +1,5 @@
 require('dotenv').config();
+const path = require('path');
 const express = require('express');
 const cors = require('cors');
 
@@ -15,6 +16,8 @@ app.use(cors({
 }));
 app.use(express.json());
 app.use(limiteGeral);
+
+app.use('/imagens', express.static(path.join(__dirname, '..', 'public', 'imagens')));
 
 app.get('/health', (req, res) => res.json({ status: 'ok' }));
 

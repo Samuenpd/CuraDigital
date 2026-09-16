@@ -1,0 +1,19 @@
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: plataforma-ofertas-redis
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+# Uso:
+#   docker compose up -d
+#
+# Isso sobe só o Redis. O backend (porta 3000), o frontend (porta 5173)
+# e o notification-service continuam rodando localmente com `npm run dev`
+# / `npm start` em cada pasta, apontando pra REDIS_URL=redis://localhost:6379
+# (ver .env.example de backend/ e notification-service/).

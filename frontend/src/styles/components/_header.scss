@@ -1,0 +1,72 @@
+@use '../base/variables' as *;
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $espaco-md;
+  padding: $espaco-md max(6vw, 32px);
+  background: $cor-fundo-card;
+  border-bottom: 1px solid $cor-borda;
+}
+
+.site-header__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: $espaco-sm;
+  color: $cor-primaria-escura;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.site-header__logo-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: $cor-primaria-suave;
+  color: $cor-primaria;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.site-header__nav {
+  display: flex;
+  align-items: center;
+  gap: $espaco-md;
+}
+
+.site-header__link {
+  color: $cor-texto-suave;
+  font-size: 14px;
+  font-weight: 600;
+
+  &:hover {
+    color: $cor-primaria-escura;
+  }
+}
+
+.site-header__usuario {
+  display: flex;
+  align-items: center;
+  gap: $espaco-sm;
+  color: $cor-texto;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@include tablet {
+  .site-header {
+    padding: $espaco-sm $espaco-md;
+  }
+
+  .site-header__nav {
+    gap: $espaco-sm;
+  }
+}

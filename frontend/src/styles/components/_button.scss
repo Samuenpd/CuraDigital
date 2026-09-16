@@ -1,12 +1,17 @@
 @use '../base/variables' as *;
 
 .btn {
-  border: none;
-  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $espaco-sm;
+  border: 1px solid transparent;
+  border-radius: $raio-sm;
   padding: $espaco-sm $espaco-lg;
   font-weight: bold;
+  font-size: 15px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 
   &--primary {
     background: $cor-primaria;
@@ -15,5 +20,31 @@
     &:hover {
       background: $cor-primaria-escura;
     }
+  }
+
+  &--outline {
+    background: transparent;
+    border-color: $cor-borda;
+    color: $cor-primaria-escura;
+
+    &:hover {
+      border-color: $cor-primaria;
+      background: $cor-primaria-suave;
+    }
+  }
+
+  &--texto {
+    background: transparent;
+    color: $cor-texto-suave;
+    padding: $espaco-xs $espaco-sm;
+
+    &:hover {
+      color: $cor-primaria-escura;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
   }
 }
