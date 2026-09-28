@@ -95,6 +95,128 @@ const ofertas = [
     imagem_url: "http://localhost:3000/imagens/hidradante-corporal.jpg",
     categoria: 'Dermocosméticos',
   },
+  {
+    titulo: 'Máscara Descartável Facial  - 100 Unidades ',
+    descricao: 'Tripla Camada de Proteção Filtro Branca',
+    preco_original: 70.9,
+    preco_atual: 30.9,
+    imagem_url: "http://localhost:3000/imagens/mascara-descartaveis.jpg",
+    categoria : 'Dermocosméticos',
+  },
+  {
+    titulo: 'Absorvente Sempre Livre - 8 unidades',
+    descricao:  'conforto Noturno Com abas',
+    preco_original: 14.99,
+    preco_atual: 9.99,
+    imagem_url: 'http://localhost:3000/imagens/absorventes-duas-abas.jpg',
+    categoria : 'dermocosmeticos'
+  },
+  {
+    titulo: 'protetor solar facial 40g',
+    descricao: 'protetor facil com FPS 50 com textura leve',
+    preco_original: 49.99,
+    preco_atual: 34.99,
+    imagem_url: 'http://localhost:3000/imagens/protetor-solar-laranja.jpg',
+    categoria :'dermoscosmeticos'
+  },
+  {
+   titulo:'Fralda pamper confort sec tamanho xg 86 unidade',
+   descricao:'ajustes anatomicos e loção hipoarlegica para a pele do bebe',
+   preco_original:119.99,
+   preco_atual: 99.99,
+   imagem_url: 'http://localhost:3000/imagens/fralda-pampers.jpg',
+   categoria: 'dermoscosmeticos'
+  },
+  {
+    titulo: 'Minoxidil Tubinado 120ml',
+   descricao: 'Indicado para controle da queda de cabelo',
+   preco_original: 141,
+   preco_atual:  42 ,
+   imagem_url: 'http://localhost:3000/imagens/minoxidil.jpg',
+   categoria: 'dermoscosmeticos'
+  },
+  {
+    titulo: 'Colirio Lubrificante 10ml',
+  descricao: 'colirio lubrificante',
+  preco_original: 119.99,
+  preco_atual: 95.99,
+  imagem_url: 'http://localhost:3000/imagens/colirio_lubrificante.jpg',
+  categoria: 'dermoscosmeticos'
+    },
+    {
+      titulo: 'Desodorante Super Men Citrus 250ml',
+    descricao:'Desodorante Super Men Citrus Aerossol',
+    preco_original: 23.90,
+    preco_atual: 10.99,
+    imagem_url: 'http://localhost:3000/imagens/desodorante.jpg',
+    categoria: 'dermoscosmeticos'
+
+  },
+  {
+    titulo:'Creme Hidrandante Nivea Milk 400ml',
+    descricao:'ideal para pele seca',
+    preco_original: 50,
+    preco_atual: 21.94,
+    imagem_url: 'http://localhost:3000/imagens/CREME-NIVEA.jpg',
+    categoria: 'dermoscosmeticos'
+  },
+  {
+    titulo: 'Paracetamol 750mg 20 comprimido',
+    descricao: 'Alivia dores leves '
+    preco_original:
+    preco_atual:
+    imagem_url: null
+    categoria:
+  },
+
+  {
+    titulo: 'Dipirona Monoidratada, 50mg/ml',
+    descricao: 'Versátil para uso pediátrico e adulto',
+    preco_original:
+    preco_atual:
+    imagem_url: null
+    categoria:
+
+  },
+
+  {
+    titulo: 'Ibuprofeno 400mg',
+    descricao: 'Alivia dores',
+    preco_original:
+    preco_atual:
+    imagem_url: null
+    categoria:
+
+  },
+
+  {
+    titulo: 'Kit Dolve Original em barra 90g e 6 unid',
+    descricao: 'Limpa e protege a hidratação natural da pele',
+    preco_original:
+    preco_atual:
+    imagem_url: null
+    categoria:
+
+  },
+
+  {
+    titulo: 'Hestes flexiveis Cotonetes pote com 150 unidade',
+    descricao: ' Indicado para a higiene pessoal de toda a família',
+    preco_original:
+    preco_atual:
+    imagem_url: null
+    categoria:
+
+  },
+
+  {
+    titulo: 'Compressa de Gazes Esteril 10 unidade'
+    descricao: ' Protecão para ferimentos e contusoes'
+    preco_original:
+    preco_atual: null
+    categoria:
+  }
+  
 ];
 
 db.exec('DELETE FROM ofertas');

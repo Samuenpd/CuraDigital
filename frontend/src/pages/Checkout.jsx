@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import Button from '../components/Button';
 import { ofertasService } from '../services/api';
 
 function Checkout() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [oferta, setOferta] = useState(null);
   const [erro, setErro] = useState(null);
   const [concluido, setConcluido] = useState(false);
@@ -72,7 +73,7 @@ function Checkout() {
                 </div>
               </div>
 
-              <Button variant="primary" onClick={() => setConcluido(true)}>
+              <Button variant="primary" onClick={() => navigate(`/pagamento/${id}`)}>
                 Confirmar compra
               </Button>
             </>

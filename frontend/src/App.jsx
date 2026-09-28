@@ -6,6 +6,7 @@ import OfertaDetalhe from './pages/OfertaDetalhe';
 import Login from './pages/Login';
 import Cadastro from './pages/Cadastro';
 import Checkout from './pages/Checkout';
+import Pagamento from './pages/Pagamento';
 import AdminOfertas from './pages/AdminOfertas';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route element={<ProtectedRoute />}>
           <Route path="/checkout/:id" element={<Checkout />} />
           <Route path="/admin/ofertas" element={<AdminOfertas />} />
+          <Route path="/pagamento/:id" element={<Pagamento />} />
         </Route>
       </Routes>
     </>
