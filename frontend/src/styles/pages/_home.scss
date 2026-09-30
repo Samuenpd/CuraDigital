@@ -96,6 +96,15 @@
   font-size: 15px;
 }
 
+.home-page__busca::-webkit-search-cancel-button,
+.home-page__busca::-webkit-search-decoration,
+.home-page__busca::-webkit-search-results-button,
+.home-page__busca::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+
 .home-page__busca::placeholder {
   color: #98a59c;
 }
