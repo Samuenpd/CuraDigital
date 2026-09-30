@@ -1,33 +1,19 @@
-# Plataforma de Ofertas — Projeto Full Stack
+# Plataforma de Ofertas
 
-Projeto acadêmico (equipe de 2 a 4 alunos) — **Tema:** Plataforma de Ofertas.
-**Entrega:** 30/09 a 07/10.
+Projeto acadêmico Full Stack para consulta de ofertas e demonstração de alertas de preço via microsserviço. Período informado para apresentação e entrega: 30/09 a 07/10.
 
-## Visão geral
+## Componentes
 
-Aplicação Web Full Stack com separação clara entre Front-end e Back-end,
-baseada em ecossistema de microsserviços, focada em ser responsiva,
-performática, testada e segura.
+- `frontend/`: SPA React/Vite com estilos SCSS.
+- `backend/`: API REST Express, SQLite, JWT e publicação de jobs.
+- `notification-service/`: consumidor assíncrono BullMQ.
+- `docs/`: arquitetura, papéis, cronograma, setup, checklist e relatório.
+- `.github/workflows/ci.yml`: verificações automáticas em push e pull request.
 
-## Estrutura do repositório
+## Início rápido
 
-```
-plataforma-de-ofertas/
-├── frontend/              # Integrante A — interface, SASS, testes Jest/Cypress
-├── backend/                # Integrante B — API REST, segurança, autenticação
-├── notification-service/   # Integrante B — microsserviço de alertas via fila
-├── docs/                   # Documentação do projeto (papéis, checklist, cronograma, arquitetura)
-└── .github/workflows/      # Pipeline de CI/CD
-```
+Consulte [`docs/05-guia-de-setup.md`](docs/05-guia-de-setup.md) para configuração e comandos. O relatório de entrega está em [`docs/06-relatorio-de-entrega.md`](docs/06-relatorio-de-entrega.md).
 
-## Documentação
+## Situação
 
-- [`docs/01-papeis-e-stack.md`](docs/01-papeis-e-stack.md) — divisão de papéis e stack tecnológico
-- [`docs/02-checklist-avaliacao.md`](docs/02-checklist-avaliacao.md) — checklist técnico para nota
-- [`docs/03-arquitetura.md`](docs/03-arquitetura.md) — arquitetura do sistema
-- [`docs/04-cronograma.md`](docs/04-cronograma.md) — cronograma até a entrega
-- [`docs/05-guia-de-setup.md`](docs/05-guia-de-setup.md) — como cada módulo será inicializado
-
-## Status
-
-🚧 Só a estrutura msm viu, tem mais nada aqui n
+A estrutura funcional do produto está implementada. A pontuação Lighthouse, a suíte Cypress/frontend e o deploy ainda precisam ser produzidos/configurados para comprovar esses critérios; detalhes e próximos passos estão no relatório.

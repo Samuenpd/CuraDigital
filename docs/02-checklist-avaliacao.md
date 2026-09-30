@@ -1,14 +1,12 @@
-# Checklist Técnico para Avaliação (nota de 0 a 10)
+# Checklist técnico para avaliação
 
-A equipe não deve apenas entregar o código funcionando — precisa cumprir
-este checklist:
+| Critério | Situação | Evidência / conclusão |
+|---|---|---|
+| Interface responsiva com SASS/SCSS | Implementada | SCSS responsivo em `frontend/src/styles`; revisar em dispositivos na apresentação |
+| Lighthouse acima de 80 | CI configurada; resultado da execução pendente | `.lighthouserc.json` exige performance >= 81/100 e salva relatórios como artefato |
+| Testes Jest e Cypress | Implementados; execução da CI pendente | Jest no backend/frontend; Cypress cobre vitrine, busca e detalhe |
+| CORS, rate-limit, JWT | Implementado | Definir `JWT_SECRET` e `CORS_ORIGIN` seguros por ambiente |
+| Serviço de notificação por fila | Implementado | BullMQ/Redis; configurar `NOTIFICATION_WEBHOOK_URL` para entrega externa (sem URL, roda em simulação) |
+| Pipeline CI/CD | CI configurada; CD aguarda destino | `.github/workflows/ci.yml`; falta escolher hospedagem e cadastrar secrets de deploy |
 
-- [ ] 1. Interface responsiva via SASS
-- [ ] 2. Performance validada (Lighthouse > 80)
-- [ ] 3. Cobertura de testes (Jest/Cypress)
-- [ ] 4. API Segura (CORS, Rate-limit, JWT)
-- [ ] 5. Microsserviço de notificação rodando via fila de mensagens
-- [ ] 6. Pipeline de CI/CD configurada e funcional
-
-> Dica: usar este checklist como critério de "Definition of Done" de
-> cada tarefa no board do time (Trello/GitHub Projects).
+Use este checklist no ensaio e atualize os itens após reunir as evidências de execução. Ver [`06-relatorio-de-entrega.md`](06-relatorio-de-entrega.md).

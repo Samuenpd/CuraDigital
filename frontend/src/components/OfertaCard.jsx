@@ -1,9 +1,8 @@
 import { Link } from 'react-router-dom';
+import { calcularDesconto } from '../utils/oferta';
 
 function OfertaCard({ oferta }) {
-  const desconto = Math.round(
-    ((oferta.preco_original - oferta.preco_atual) / oferta.preco_original) * 100
-  );
+  const desconto = calcularDesconto(oferta.preco_original, oferta.preco_atual);
 
   return (
     <Link to={`/ofertas/${oferta.id}`} className="oferta-card">
